@@ -50,4 +50,3 @@ function Addbook() {
 }
 
 export default Addbook;
-;

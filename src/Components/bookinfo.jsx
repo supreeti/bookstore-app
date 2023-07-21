@@ -4,7 +4,9 @@ import { useDispatch } from 'react-redux';
 import { remove } from '../redux/books/booksSlice';
 import Button from './button';
 
-function Book({ item_id: id, title, author, category }) {
+function Book({
+  item_id: id, title, author, category,
+}) {
   const dispatch = useDispatch();
   return (
     <div className="bookstoredata">
