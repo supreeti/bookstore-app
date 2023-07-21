@@ -1,23 +1,27 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { remove } from '../redux/books/booksSlice';
+import Button from './button';
 
-const Book = ({ book, onDelete }) => {
-  const {
-    id, title, author, category,
-  } = book;
-
+function Book({ item_id: id, title, author, category }) {
+  const dispatch = useDispatch();
   return (
     <div className="bookstoredata">
       <section>
         <span>{category}</span>
-        <h2>{title}</h2>
-        <h3>{author}</h3>
-        <button type="submit">Comments</button>
-        <button type="submit" data-index={id} onClick={() => onDelete(id)}>Remove</button>
-        <button type="submit">Edit</button>
+        <h3>{title}</h3>
+        <p>{author}</p>
+        <button type="button">Comments</button>
+        <Button
+          type="button"
+          onClick={() => dispatch(remove(id))}
+          btval="Remove"
+          btnm="remove"
+        />
+        <button type="button">Edit</button>
       </section>
-      <section>
-        <div className="bookinfo" />
+      <section className="bookinfo">
         <article className="percentages">
           <span>Complete</span>
         </article>
@@ -25,20 +29,16 @@ const Book = ({ book, onDelete }) => {
       <section className="progress">
         <span>CURRENT CHAPTER</span>
         <span>Chapter 3</span>
-        <button type="submit">UPDATE PROGRESS</button>
+        <button type="button">UPDATE PROGRESS</button>
       </section>
     </div>
   );
-};
+}
+export default Book;
 
 Book.propTypes = {
-  book: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
-  }).isRequired,
-  onDelete: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  item_id: PropTypes.string.isRequired,
 };
-
-export default Book;
