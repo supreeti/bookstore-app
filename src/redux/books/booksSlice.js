@@ -8,7 +8,7 @@ const initialState = {
   isError: false,
 };
 
-export const fetch = createAsyncThunk('books/fetch', async (thunkAPI) => {
+export const fetch = createAsyncThunk('books/fetchBooks', async (thunkAPI) => {
   try {
     const bookApi = await axios.get(url);
     return bookApi.data;
@@ -17,7 +17,7 @@ export const fetch = createAsyncThunk('books/fetch', async (thunkAPI) => {
   }
 });
 
-export const addBooks = createAsyncThunk('books/addBooks', async (payload, thunkAPI) => {
+export const addBooks = createAsyncThunk('books/addBook', async (payload, thunkAPI) => {
   try {
     const addBookApi = await axios.post(url, payload);
     thunkAPI.dispatch(fetch());
@@ -27,7 +27,7 @@ export const addBooks = createAsyncThunk('books/addBooks', async (payload, thunk
   }
 });
 
-export const deleteBooks = createAsyncThunk('books/deleteBooks', async (id, thunkAPI) => {
+export const deleteBooks = createAsyncThunk('books/removeBook', async (id, thunkAPI) => {
   try {
     const delBookApi = await axios.delete(`${url}/${id}`);
     thunkAPI.dispatch(fetch());
