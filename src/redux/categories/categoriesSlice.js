@@ -9,7 +9,7 @@ const categories = createSlice({
   name: 'category',
   initialState,
   reducers: {
-    toggleStatus: (state) => {
+    toggleStatus: (state = initialState) => {
       state.status = 'Under Construction...';
     },
   },
