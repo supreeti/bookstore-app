@@ -30,7 +30,7 @@ function Addbook() {
   return (
     <div className="main">
       <h2 className="form-tittle">ADD NEW BOOK</h2>
-      <form>
+      <form className="book-form">
         <input
           type="text"
           id="input-tittle"
@@ -45,17 +45,19 @@ function Addbook() {
           value={author}
           onChange={onAuthorChange}
         />
-        <select
-          className="form-select"
-          id="select-btn"
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-        >
-          <option value="empty">select category</option>
-          <option value="Action">Action</option>
-          <option value="Science fiction">Science fiction</option>
-          <option value="Economy">Economy</option>
-        </select>
+        <div className="form-last">
+          <select
+            className="form-select"
+            id="select-btn"
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          >
+            <option value="empty">select Category</option>
+            <option value="Action">Action</option>
+            <option value="Science fiction">Science fiction</option>
+            <option value="Economy">Economy</option>
+          </select>
+        </div>
         <Button type="submit" onClick={save} btnm="Add-btn" btval="Add Book" />
       </form>
     </div>

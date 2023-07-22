@@ -10,28 +10,37 @@ function Book({
   const dispatch = useDispatch();
   return (
     <div className="bookstoredata">
-      <section>
-        <span>{category}</span>
+      <section className="book">
+        <span className="cate">{category}</span>
         <h3>{title}</h3>
-        <p>{author}</p>
-        <button type="button">Comments</button>
-        <Button
-          type="button"
-          onClick={() => dispatch(deleteBooks(id))}
-          btval="Remove"
-          btnm="remove"
-        />
-        <button type="button">Edit</button>
+        <p className="author">{author}</p>
+        <div className="buttons">
+          <Button btnm="comments-btn" btval="Comments" />
+          <div className="separate" />
+          <Button
+            type="button"
+            onClick={() => dispatch(deleteBooks(id))}
+            btval="Remove"
+            btnm="remove"
+          />
+          <div className="separate" />
+          <Button btnm="edit-btn" btval="Edit" />
+        </div>
       </section>
       <section className="bookinfo">
+        <div className="oval" />
         <article className="percentages">
-          <span>Complete</span>
+          <h2>64%</h2>
+          <span>Completed</span>
         </article>
       </section>
       <section className="progress">
-        <span>CURRENT CHAPTER</span>
-        <span>Chapter 3</span>
-        <button type="button">UPDATE PROGRESS</button>
+        <div className="line" />
+        <div className="column-chapter">
+          <h5>CURRENT CHAPTER</h5>
+          <p>Chapter 3</p>
+          <Button btnm="update-btn" btval="UPDATE PROGRESS" />
+        </div>
       </section>
     </div>
   );
