@@ -52,12 +52,28 @@ a {
 }
 
 .nav-menu {
-  height: 16px;
-  font-family: Lato, sans-serif;
-  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  list-style: none;
+}
+
+.books {
+  height: 1rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.813rem;
   font-weight: normal;
-  color: grey;
-  margin-top: 10px;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.category {
+  height: 1rem;
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.813rem;
+  letter-spacing: 1.9px;
+  color: #121212;
 }
 
 .nav svg {
@@ -120,6 +136,22 @@ a {
   display: flex;
   flex-direction: column;
   margin-left: 15px;
+}
+
+.percentages h2 {
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 2rem;
+  color: #121212;
+}
+
+.percentages span {
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  color: #121212;
 }
 
 .author {
@@ -273,7 +305,7 @@ a {
   padding-top: 10px;
 }
 
-.update-container h5 {
+.column-chapter h5 {
   opacity: 0.5;
   font-family: Roboto Slab, sans-serif;
   font-size: 0.813rem;
@@ -282,7 +314,7 @@ a {
   padding-bottom: 0.43rem;
 }
 
-.update-container p {
+.column-chapter p {
   height: 1.313rem;
   font-family: Roboto Slab, sans-serif;
   font-size: 1rem;

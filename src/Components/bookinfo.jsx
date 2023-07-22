@@ -37,8 +37,8 @@ function Book({
       <section className="progress">
         <div className="line" />
         <div className="column-chapter">
-          <span>CURRENT CHAPTER</span>
-          <span>Chapter 3</span>
+          <h5>CURRENT CHAPTER</h5>
+          <p>Chapter 3</p>
           <Button btnm="update-btn" btval="UPDATE PROGRESS" />
         </div>
       </section>

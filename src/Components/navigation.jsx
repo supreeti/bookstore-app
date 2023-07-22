@@ -8,8 +8,8 @@ const Navigation = () => (
     <div className="nav">
       <h1>Bookstore CMS</h1>
       <ul className="nav-menu">
-        <li><NavLink to="/">BOOKS</NavLink></li>
-        <li><NavLink to="/categories">CATEGORIES</NavLink></li>
+        <li><NavLink className="books" to="/">BOOKS</NavLink></li>
+        <li><NavLink className="category" to="/categories">CATEGORIES</NavLink></li>
       </ul>
       <User />
     </div>
