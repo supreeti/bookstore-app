@@ -18,7 +18,6 @@ header {
   background-color: #fff;
 }
 
-
 .bookstore {
   width: 100%;
   min-height: 100vh;
@@ -57,7 +56,7 @@ a {
   font-family: Lato, sans-serif;
   font-size: 18px;
   font-weight: normal;
-  color: grey;  
+  color: grey;
   margin-top: 10px;
 }
 
